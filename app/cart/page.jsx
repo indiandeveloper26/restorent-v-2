@@ -27,7 +27,7 @@ export default function CartPage() {
             return;
         }
         try {
-            const res = await axios.get(`http://localhost:3000/backend/api/cart/get/${userId}`);
+            const res = await axios.get(`https://restorent-v-2.vercel.app/api/cart/get/${userId}`);
             console.log('cartdatat', res)
             setCart(res.data.cart || []);
         } catch (err) {
