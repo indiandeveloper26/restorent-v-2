@@ -27,7 +27,7 @@ export default function UserProfile() {
                 const userId = parsedUser._id || parsedUser.id;
                 if (userId) {
                     // Yahan apna sahi backend URL check kar lena
-                    const res = await fetch(`https://restorent-v-2.vercel.app/backend/api/userinfo/${userId}`);
+                    const res = await fetch(`/backend/api/userinfo/${userId}`);
                     const data = await res.json();
                     if (data.success) setFullUserData(data.user);
                 }
